@@ -24,6 +24,9 @@ jobs:
       with:
         flutter-version: '3.19.6'
 
+    - name: Reconstruct Android Project
+      run: flutter create . --platforms=android --org=com.tonkeeper.clone
+
     - name: Get dependencies
       run: flutter pub get
 
