@@ -24,11 +24,11 @@ jobs:
       with:
         flutter-version: '3.19.6'
 
-    - name: Install dependencies
+    - name: Get dependencies
       run: flutter pub get
 
     - name: Build AppBundle
-      run: flutter build appbundle --release --no-codesign
+      run: flutter build appbundle --release
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
